@@ -62,8 +62,8 @@ FROM employees
 WHERE DATE_FORMAT(birth_date, '%m-%d') IN ('12-25');
 
 # Find all employees hired in the 90s and born on Christmas — 362 rows
-SELECT first_name, last_name, birth_date
+SELECT first_name, last_name, birth_date, hire_date
 FROM employees
-WHERE year(birth_date) BETWEEN 1989 AND 2000
+WHERE year(hire_date) BETWEEN 1990 AND 1999
   AND month(birth_date) = 12
   AND day(birth_date) = 25;
