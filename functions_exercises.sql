@@ -59,4 +59,11 @@ WHERE last_name LIKE '%q%'
 # Find all employees born on Christmas — 842 rows
 SELECT first_name, last_name, birth_date
 FROM employees
-ORDER BY MONTH(birth_date), DAYOFMONTH(birth_date);
+WHERE DATE_FORMAT(birth_date, '%m-%d') IN ('12-25');
+
+# Find all employees hired in the 90s and born on Christmas — 362 rows
+SELECT first_name, last_name, birth_date
+FROM employees
+WHERE year(birth_date) BETWEEN 1989 AND 2000
+  AND month(birth_date) = 12
+  AND day(birth_date) = 25;
