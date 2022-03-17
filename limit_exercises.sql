@@ -1,0 +1,18 @@
+USE employees;
+DESCRIBE employees;
+DESCRIBE titles;
+DESCRIBE salaries;
+
+SELECT DISTINCT title FROM titles;
+
+
+# List the first 10 distinct last name sorted in descending order
+SELECT DISTINCT last_name FROM employees
+ORDER BY last_name DESC
+LIMIT 10;
+
+
+# Create a query to get the top 5 salaries and display just the employees number from the salaries table.
+SELECT emp_no FROM salaries
+ORDER BY salary DESC
+limit 5;
