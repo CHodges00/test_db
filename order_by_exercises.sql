@@ -5,20 +5,21 @@ SHOW TABLES ;
 DESCRIBE employees;
 
 
-# Find all employees with first names 'Irena', 'Vidya', or 'Maya' — 709 rows
-# Add a condition to the previous query to find everybody with those names who is also male — 441 rows.
-SELECT *
+# Modify your first query to order by first name. The first result should be Irena Pelz and the last result should be Vidya Awdeh.
+SELECT first_name, last_name
 FROM employees
 WHERE gender = 'M'
  AND   (first_name IN ('Irena', 'Vidya')
  OR first_name IN ('Maya')
-     );
+)
+ORDER BY first_name DESC , last_name;
 
 
 # Find all employees whose last name starts with 'E' — 7,330 rows
 SELECT  *
 FROM employees
-WHERE last_name LIKE 'E%';
+WHERE last_name LIKE 'E%'
+ORDER BY emp_no DESC;
 
 # Find all employees whose last name starts or ends with 'E' — 30,723 rows
 SELECT  *
