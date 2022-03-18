@@ -19,8 +19,10 @@ WHERE gender = 'M'
 # Use count(*) and GROUP BY to find the number of employees for each gender with those names.
 SELECT COUNT(*), gender
 FROM employees
-WHERE gender = 'M' 
+WHERE gender = 'M'
   AND (first_name IN ('Irena', 'Vidya', 'Maya'))
+OR gender = 'F'
+    AND (first_name IN ('Irena', 'Vidya', 'Maya'))
 GROUP BY gender;
 
 
