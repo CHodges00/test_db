@@ -70,8 +70,8 @@ WHERE year(hire_date) BETWEEN 1990 AND 1999
 
 
 # Change the query for employees hired in the 90s and born on Christmas such that the first result is the oldest employee who was hired last.
+# For your query of employees born on Christmas and hired in the 90s, use datediff() to find how many days they have been working at the company
 # It should be Khun Bernini.
-
 SELECT first_name, last_name, birth_date, hire_date,
 DATEDIFF (curdate(), hire_date)
 FROM employees
@@ -82,6 +82,6 @@ ORDER BY year(birth_date), year(hire_date) DESC;
 
 
 
-# For your query of employees born on Christmas and hired in the 90s, use datediff() to find how many days they have been working at the company
+
 
 
