@@ -31,7 +31,8 @@ WHERE last_name LIKE 'E%'
 SELECT  *
 FROM employees
 WHERE last_name LIKE 'E%'
-  AND  last_name LIKE '%E';
+  AND  last_name LIKE '%E'
+;
 
 
 # Find all employees with a 'q' in their last name — 1,873 rows
